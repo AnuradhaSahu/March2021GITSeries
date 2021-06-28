@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [TestNG Sessions Suite]" guice-stage="DEVELOPMENT" verbose="4">
+  <test thread-count="2" parallel="tests" name="OrangeHRMTest(failed)" verbose="4">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.orangehrm.com/orangehrm-30-day-trial"/>
+    <classes>
+      <class name="TestNGSessions.OrangeHRMTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="titleTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestNGSessions.OrangeHRMTest -->
+    </classes>
+  </test> <!-- OrangeHRMTest(failed) -->
+  <test thread-count="2" parallel="tests" name="ParellelExecutionAssignment(failed)" verbose="4">
+    <parameter name="password" value="Test@12345"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://classic.crmpro.com/index.html"/>
+    <parameter name="username" value="groupautomation"/>
+    <classes>
+      <class name="TestNGSessions.ParellelExecutionAssignment">
+        <methods>
+          <include name="titleTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="displaySearchTest"/>
+        </methods>
+      </class> <!-- TestNGSessions.ParellelExecutionAssignment -->
+    </classes>
+  </test> <!-- ParellelExecutionAssignment(failed) -->
+</suite> <!-- Failed suite [TestNG Sessions Suite] -->
